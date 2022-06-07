@@ -1,0 +1,23 @@
+worker node was restarted once 
+NAME                          READY   STATUS    RESTARTS   AGE
+db-b54cd94f4-fgf64            1/1     Running   0          6m10s
+ratings-v2-7f5576697d-25g5r   1/1     Running   0          21h
+redis-868d64d78-xd9lb         1/1     Running   0          6m10s
+result-5d57b59f4b-sptfj       1/1     Running   0          6m10s
+vote-94849dc97-ddf7z          1/1     Running   0          6m10s
+worker-dd46d7584-7hgh4        1/1     Running   1          6m10s
+
+nodeport are assigned 
+result   NodePort    10.109.141.243   <none>        5001:31001/TCP   13m
+vote     NodePort    10.99.236.12     <none>        5000:31000/TCP   13m
+
+
+after voting in voting app it immediately showing in result app 
+
+after deleting voting app node it is recreated but vote is not get reflected in result app
+
+after deleting worker pod it is recreated but the data is lost
+
+afeter deleting dp pod it is recreated but the vote count is lost in result and it not showing further any count or result 
+
+deleted the worker pod, old pod was terminating and new is created after that all working fine 
