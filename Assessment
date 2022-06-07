@@ -1,3 +1,25 @@
+
+Assessment 1
+we use demone pod when we have to use a pod in the in all nodes same time
+
+Assessment 2
+
+we can use rolling update it removes the old pod and creates new pod on same time before terminating old pod it creates new pod
+we will patach minimumread kubectl patch deployment kubia -p '{"spec": {"minReadySeconds": xxx}}'y seconds to the deployment 
+and then
+----$kubectl patch deployment kubia -p '{"spec": {"minReadySeconds": xxx}}'
+ then we will perform set image command so it will update to this image in the update
+----$set image deployment xxx
+then it will gradually change from previous version to new version
+
+Assessment 3
+
+1 we should check if the service is accessable within cluster or not 
+2 if it is accessable then its ok
+3 if it is not accessable then we have to check that weather application is running and working within container itself if not it's application problem
+4 if it is running in container we have to check then the yaml file with we have created the service there we will check weather we have used correct selector or not 
+5 and keep the port above 30000
+Assessment 4
 worker node was restarted once 
 NAME                          READY   STATUS    RESTARTS   AGE
 db-b54cd94f4-fgf64            1/1     Running   0          6m10s
