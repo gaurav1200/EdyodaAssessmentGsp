@@ -20,4 +20,5 @@ after deleting worker pod it is recreated but the data is lost
 
 afeter deleting dp pod it is recreated but the vote count is lost in result and it not showing further any count or result 
 
+in order to make rsult pod work 
 deleted the worker pod, old pod was terminating and new is created after that all working fine 
